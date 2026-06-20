@@ -419,9 +419,9 @@ jobs:
           # Compile options reference: https://docs.armbian.com/Developer-Guide_Build-Options
           cd build/
               ./compile.sh RELEASE=${{ matrix.release }} BOARD=${config_board} BRANCH=current BUILD_MINIMAL=no \
-                           BUILD_ONLY=default HOST=armbian BUILD_DESKTOP=yes EXPERT=yes KERNEL_CONFIGURE=no \
-                           DESKTOP_ENVIRONMENT=xfce \           # ← 加这行
-                           COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes
+             BUILD_ONLY=default HOST=armbian BUILD_DESKTOP=yes EXPERT=yes KERNEL_CONFIGURE=no \
+             DESKTOP_ENVIRONMENT=xfce \
+             COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes
 
           echo "status=success" >> ${GITHUB_OUTPUT}
 
